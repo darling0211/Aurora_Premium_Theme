@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#fff5f0" />
+    <title>Aurora V2 — A Love Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating particles (hearts/petals) -->
+    <div id="particles" aria-hidden="true"></div>
+
+    <!-- Background gradient wash -->
+    <div id="bg-wash" aria-hidden="true"></div>
+
+    <!-- Music control -->
+    <button id="music-btn" class="music-btn" aria-label="Play or pause background music">
+      <span class="music-icon music-icon-play" aria-hidden="true">&#9835;</span>
+      <span class="music-icon music-icon-pause" aria-hidden="true">&#10073;&#10073;</span>
+    </button>
+
+    <!-- Pages container -->
+    <main id="book" class="book" aria-live="polite"></main>
+
+    <!-- Navigation controls -->
+    <nav id="nav" class="nav-controls" aria-label="Page navigation">
+      <button id="prev-btn" class="nav-btn nav-btn-prev" aria-label="Previous page">
+        <span class="nav-arrow">&#8249;</span>
+        <span class="nav-label">Previous</span>
+      </button>
+      <div id="page-dots" class="page-dots" aria-hidden="true"></div>
+      <button id="next-btn" class="nav-btn nav-btn-next" aria-label="Next page">
+        <span class="nav-label">Next</span>
+        <span class="nav-arrow">&#8250;</span>
+      </button>
+    </nav>
+
+    <!-- Fullscreen image preview -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Close preview">&times;</button>
+      <figure class="lightbox-figure">
+        <img id="lightbox-img" class="lightbox-img" src="" alt="" />
+        <figcaption id="lightbox-caption" class="lightbox-caption"></figcaption>
+      </figure>
+    </div>
+
+    <script type="module" src="config.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
